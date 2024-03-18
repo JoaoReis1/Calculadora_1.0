@@ -108,8 +108,9 @@ def controle_erro():
         #txtbox_result.insert("1.0",f"{digitados}")    
         
         #percorre a lista pelo enumerate e retorna sem o []
+        digitados.reverse()
         for indi, value in enumerate(digitados):
-            print(value,end=' ')
+            #print(value,end=' ')
             txtbox_result.insert("1.0",f"{value}") 
     else:
         print(db,end=' ')
@@ -117,9 +118,9 @@ def controle_erro():
         
         txtbox_result = customtkinter.CTkTextbox(janela,corner_radius=0, text_color = "white" ,width=275,height=85)
         txtbox_result.place(x=10,y=10)
-        
+        digitados.reverse()
         for indi, value in enumerate(digitados):
-            print(value,end=' ')
+            #print(value,end=' ')
             txtbox_result.insert("1.0",f"{value}") 
     
 main()
