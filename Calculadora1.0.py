@@ -89,7 +89,11 @@ def soma ():
 def resultado():
     if not db:
         #Caso nenhum operador seja escolhido mostrará os numeros digitados, IMPORTANT:Informação só tornará no prompt, na tela inda mostrará os numeros digitados conforme interação.
+        
+        tranforma_string = [str(i)for i in digitados]
+        n1 = ''.join(tranforma_string)
         print(n1)
+        
     else:
     
         ' primeiro laço descobre quantas lista tem dentro das lista'
@@ -107,13 +111,11 @@ def resultado():
         resultado = 0
         descricao =''
         
-        
         for ind, val in enumerate(db):
             resultado = resultado + val
-        
-        
+    
         for i in db:
-            descricao=f"{i}+"
+            descricao= descricao + f"{i}+"
         
         txtbox_result.insert("1.0",f"{descricao}={resultado}")  
         
